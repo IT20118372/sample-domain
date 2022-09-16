@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    color: black;
+    line-height: 5.6;
+}
+
+.content {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/PatternAsset\ 1.png);
+    background-size: cover;
+
+}
+
+.wrapper {
+    background-color: white;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    box-shadow: 0 0.5vw 3vw #777;
+    
+}
+
+.content::before
+    .content::after{
+        z-index: -1;
+        position: absolute;
+        content: "";
+        bottom: 15px;
+        left: 10px;
+        width: 50%;
+        top: 1%;
+        max-width:50%;
+        background: #777;
+        box-shadow: 0 20px 18px #777;
+    }
+    .content::after{
+        right: 10px;
+        left: auto;
+    } 
+
+
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #0d5b2f;
+    text-align: center;
+    font-size: 10px;
+    color: white;
+    padding: 27px 20px;
+}
+
+.upper {
+    height: calc(100% - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px;
+}
+
+.upper img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1px;
+    width: 100px;   
+}
+
+.upper p{
+    font-size: 28px;
+    color: black;
+}
+
+  
+@media only screen and (min-width: 768px) {
+/* For tablet: */
+    .footer{
+        height: 100px;
+    }
+
+    .upper {    
+        height: calc(100% - 100px);
+    }
+
+    .upper img {
+        width: 120px;   
+    }
+
+    .wrapper {
+        top: 150px;
+        left: 150px;
+        right: 150px;
+        bottom: 150px;
+        
+    }
+
+    .content::before,
+    .content::after{
+        max-width: 49%;
+        box-shadow: 0 25px 25px #777;
+    }
+
+  
+}
+
+@media only screen and (min-width: 1200px) {
+/* For desktop: */
+    .footer{
+        height: 120px;  
+    }
+    
+    .upper {
+        height: calc(100% - 120px);
+    }
+
+    .upper img {
+        width: 140px;   
+    }
+
+    .wrapper {
+        top: 220px;
+        left: 220px;
+        right: 220px;
+        bottom: 220px;
+    }
+
+    .content:before,
+    .content::after{
+        z-index: -1;
+        position: absolute;
+        content: "";
+        bottom: 3vw;
+        left: 17vw;
+        width: 56%;
+        top: 90%;
+        max-width: 47vw;
+        background: #777;
+        box-shadow: 0 2.5vw 3vw #777;
+        transform: rotate(-3deg);
+        margin-top: -183px;
+        margin-bottom: 196px;
+    }
+    .content:after{
+        transform: rotate(3deg);
+        right: 17vw;
+        left: auto;
+    }
+    .wrapper{
+        box-shadow: none;
+    }
+}
